@@ -1,0 +1,336 @@
+.page {
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+
+    width: 1400px;
+    height: 100vh;
+
+    background: #000 url("../img/bg.jpg") center no-repeat;
+    background-size: cover;
+
+
+    margin: 0 auto;
+
+}
+
+.body {
+    font-size: 1rem;
+    margin: 0px;
+}
+
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0px;
+}
+
+.p {
+    margin: 0 0 10px;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+
+
+
+
+}
+
+
+
+/* Page */
+
+/* Header */
+
+.header {
+    background: white;
+    width: 100%;;
+
+}
+
+.header-box {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1170px;
+}
+
+.header-logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+}
+
+.header-logo-name {
+
+}
+
+.header-nav img {
+    display: inline-block;
+}
+
+.header-nav-item {
+    text-decoration: none;
+    color: black;
+    font-size: 17px;
+    font-weight: 700;
+    margin-left: 2.5rem;
+    transition: color 0.2s linear;
+}
+
+.header-nav-item:hover {
+    color: #b7fd4d;
+
+}
+
+.header-nav {
+    display: flex;
+}
+
+.header-nav-item.active {
+    position: relative;
+}
+
+.header-nav-item.active:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.header-subbox {
+     position: relative;
+    max-width: 1400px;
+    width: 1170px;
+
+}
+
+.header-subbox img {
+   width: 100%;
+
+
+
+}
+
+.header-subbox-title {
+    font-size: 60px;
+   margin-top: 190px;
+    position:absolute;
+    left: 135px;
+    top: 0;
+    color: white;
+     letter-spacing: 8px;
+}
+
+.header-subbox-subtitle {
+    margin-top: 270px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 22px;
+    left: 320px;
+    top: 0px;
+    position: absolute;
+}
+
+.header-subbox-item-first {
+    position: absolute;
+    left: 400px;
+    bottom: 200px;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.75);
+    padding: 20px;
+    border-radius: 3px;
+}
+
+.header-subbox-item-first:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+
+}
+
+.header-subbox-item-second {
+    position: absolute;
+    left: 600px;
+    bottom: 200px;
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 20px;
+     border: 2px solid greenyellow;
+    padding: 20px;
+    border-radius: 3px;
+}
+
+.header-subbox-item-second:hover {
+    background-color: rgba(154, 205, 50, 0.5);
+}
+
+.search-icon {
+
+}
+
+
+/* Content */
+
+.about-us {
+    font-size: 30px;
+    margin-top: 125px;
+    text-align: center;
+
+}
+
+.about-us-info {
+    color: #212121;
+
+    margin-top: 40px;
+    font-size: 19px;
+    text-align: center;
+}
+
+
+/* Footer */
+
+.footer {
+    position: absolute;
+    bottom: 45px;
+    left: 0px;
+    width: 100%;
+    margin-top: auto;
+
+}
+
+.contacts {
+    display: flex;
+    justify-content: center;
+     margin-top: auto;
+
+}
+
+.contacts-item {
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    text-decoration: none;
+    margin-right: 30px;
+
+}
+
+.contacts-item:last-child {
+    margin-right: 0;
+    position: relative;
+
+}
+
+.contacts-item:first-child {
+
+    position: relative;
+}
+
+.contacts-item:last-child:after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    pointer-events: none;
+    background-color: black;
+    left: 100%;
+    top: 15px;
+    margin-left: 20px;
+}
+
+.contacts-item:first-child:before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 80px;
+    height: 2px;
+    pointer-events: none;
+    background-color: black;
+    right: 100%;
+    top: 15px;
+    margin-right: 20px;
+
+}
+
+.contacts-item:hover {
+    text-decoration: underline;
+}
+
+.contacts-icon {
+    margin-right: 5px;
+}
+
+/* Books */
+
+.content {
+    width: 750px;
+    height: 100%;
+    padding: 10px 0;
+    display: block;
+    font-size: 17px;
+
+}
+
+.mnn1 {
+    position: relative;
+}
+
+.first-book {
+    text-decoration: none;
+
+}
+
+.first-book-title {
+    margin-top: 60px;
+    margin-bottom: 25px;
+
+    font-size: 30px;
+    font-weight: 600;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.first-book-title:hover {
+    transition: color 0.2s linear;
+    color: #9ad345;
+}
+
+.mnn1-img {
+    height: 385px;
+    width: auto;
+}
+
+.mnn1-items {
+
+}
+
+.mnn1-items-bold {
+    font-weight: 700;
+}
+
+.mnn1-info {
+    margin-top: 35px;
+    line-height: 1.8;
+}
+
+.mnn1-download {
+    font-size: 18px;
+    text-decoration: none;
+    color: #0e73ff;
+}
+
+.mnn1-download:hover {
+    text-decoration: underline;
+}
+
+.border-bottom {
+    border-bottom: 1px solid #dddddd;
+    margin: 45px 0;
+    width: 105%;
+
+}
