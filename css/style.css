@@ -1,21 +1,24 @@
+html {
+    scroll-behavior: smooth;
+}
 .page {
-    font-size: 15px;
-    font-family: 'Montserrat', sans-serif;
-
-    width: 1400px;
-    height: 100vh;
-
-    background: #000 url("../img/bg.jpg") center no-repeat;
+    overflow: hidden;
+    background: rgb(255, 255, 255) url("../img/bg.jpg") center no-repeat;
     background-size: cover;
-
-
-    margin: 0 auto;
-
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-.body {
-    font-size: 1rem;
-    margin: 0px;
+html,
+body {
+    height: 100% ;
+    font-size: 15px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+main {
+    flex: 1 1 auto;
 }
 
 *,
@@ -33,12 +36,12 @@ h1, h2, h3, h4, h5 {
 }
 
 .container {
-    width: 1170px;
+    width: 100%;
+    max-width: 1170px;
     margin: 0 auto;
-
-
-
-
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 
@@ -49,15 +52,15 @@ h1, h2, h3, h4, h5 {
 
 .header {
     background: white;
-    width: 100%;;
-
 }
 
 .header-box {
     display:flex;
     justify-content: space-between;
     align-items: center;
-    width: 1170px;
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .header-logo {
@@ -66,7 +69,8 @@ h1, h2, h3, h4, h5 {
 }
 
 .header-logo-name {
-
+    text-decoration: none;  
+    color: black;
 }
 
 .header-nav img {
@@ -87,60 +91,70 @@ h1, h2, h3, h4, h5 {
 
 }
 
+.header-nav-item.active:hover {
+    color: black;
+    
+}
+
 .header-nav {
     display: flex;
 }
 
-.header-nav-item.active {
-    position: relative;
+.header-nav-item {
+    overflow: hidden;
+    padding-bottom: 5px;
 }
 
-.header-nav-item.active:after {
-    content: "";
-    width: 100%;
-    height: 2px;
-    background-color: black;
-    position: absolute;
-    left: 0;
-    bottom: -5px;
+
+.header-nav-item.a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    border-bottom: 3px solid transparent;
+}
+
+.header-nav-item.active {
+    border-bottom: 3px solid rgba(0, 0, 0, 0.767);
 }
 
 .header-subbox {
-     position: relative;
-    max-width: 1400px;
-    width: 1170px;
-
+    position: relative;
+    margin-top: 10px;
 }
 
 .header-subbox img {
    width: 100%;
-
-
-
 }
 
 .header-subbox-title {
     font-size: 60px;
-   margin-top: 190px;
+    margin-top: 190px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
     position:absolute;
-    left: 135px;
+    left: 500px;
     top: 0;
     color: white;
-     letter-spacing: 8px;
+    letter-spacing: 8px;
 }
 
 .header-subbox-subtitle {
-    margin-top: 270px;
+    margin-top: 280px;
     color: rgba(255, 255, 255, 0.85);
     font-size: 22px;
-    left: 320px;
+    left: 690px;
     top: 0px;
     position: absolute;
 }
 
 .header-subbox-item-first {
     position: absolute;
-    left: 400px;
+    left: 750px;
     bottom: 200px;
     color: rgba(255, 255, 255, 0.95);
     font-size: 20px;
@@ -156,7 +170,7 @@ h1, h2, h3, h4, h5 {
 
 .header-subbox-item-second {
     position: absolute;
-    left: 600px;
+    left: 950px;
     bottom: 200px;
     color: rgba(255, 255, 255, 0.95);
     font-size: 20px;
@@ -192,21 +206,27 @@ h1, h2, h3, h4, h5 {
 }
 
 
-/* Footer */
+/* а */
 
-.footer {
-    position: absolute;
-    bottom: 45px;
-    left: 0px;
-    width: 100%;
+footer {
     margin-top: auto;
-
+    padding: 25px;
+  
 }
+
+.footer-text {
+    margin-left: 93px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 19px;
+}
+
 
 .contacts {
     display: flex;
     justify-content: center;
-     margin-top: auto;
+    margin-top: auto;
 
 }
 
@@ -267,17 +287,13 @@ h1, h2, h3, h4, h5 {
 
 /* Books */
 
-.content {
-    width: 750px;
-    height: 100%;
-    padding: 10px 0;
-    display: block;
-    font-size: 17px;
-
-}
-
 .mnn1 {
     position: relative;
+    font-size: 17px;
+}
+
+.mnn2 {
+    font-size: 17px;
 }
 
 .first-book {
@@ -332,5 +348,275 @@ h1, h2, h3, h4, h5 {
     border-bottom: 1px solid #dddddd;
     margin: 45px 0;
     width: 105%;
+
+}
+/* Kanji-Guide */
+
+.kanji-guide-title {
+    margin-top: 65px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+
+.kanji-guide-info {
+    
+    
+    
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+.kanji-guide-poster {
+    width: 800px;
+}
+
+.content {
+    width: 740px;
+
+}
+
+/*Blog*/
+
+.blog-poster {
+    width: 1170px;
+    height: 467px;
+    margin-top: 10px;
+    margin-bottom: 39px;
+    background-color:#FBFBFB;
+    position: relative;
+    border-radius: 4px;
+}
+
+.blog-poster-icon {
+    width: 70px;
+    height: 68px;
+    position: absolute;
+    left: 28%;
+    right: 65.92%;
+    top: 43.23%;
+    bottom: 38.42%;
+    transform: rotate(-23.28deg);
+}
+
+.block-poster-cover {
+    width: 476px;
+    height: 323px;
+    position: absolute;
+    left: 50.61%;
+    right: 8.07%;
+    top: 14.99%;
+    bottom: 15.85%;
+}
+
+.blog-poster-title {
+    position: absolute;
+    left: 11.02%;
+    right: 58.25%;
+    top: 28.05%;
+    bottom: 40.69%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 73px;
+    color: #000000;
+}
+
+.blog-poster-subtitle {
+    position: absolute;
+    left: 11.02%;
+    right: 60.5%;
+    top: 63.38%;
+    bottom: 28.91%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    color: #4A5568;
+ }
+
+.articles-preview {
+    display: flex;
+    height: 243px;
+    width: 966px;
+    margin: 0 93px 42px 93px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    box-shadow: 0 0 3px 0 #00000011;
+    font-family: 'Inter';
+    
+}
+
+.articles-preview-title {
+    position: absolute;
+    left: 5.62%;
+    right: 68.89%;
+    top: 16.87%;
+    bottom: 68.31%;
+    font-weight: 700;
+    font-size: 29px;
+    line-height: 36px;
+    color: #2D3748;
+}
+
+.articles-preview-date {
+    position: absolute;
+    left: 5.62%;
+    right: 84.81%;
+    top: 76.13%;
+    bottom: 17.7%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #718096;
+}
+
+.articles-preview-readmore {
+    position: absolute;
+    left: 40.58%;
+    right: 52.86%;
+    top: 76.13%;
+    bottom: 17.7%;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.articles-preview-text {
+    position: absolute;
+    left: 5.41%;
+    right: 52.86%;
+    top: 42.8%;
+    bottom: 36.21%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+
+}
+
+.preview-poster-active {
+    width: 433px;
+    height: 243px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 55.15%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+}
+
+.preview-poster-static {
+    width: 433px;
+    height: 243px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 55.15%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+    position:absolute;
+    background: white;
+}
+
+.preview-poster-static:hover {
+    opacity:0;
+  }
+
+
+
+.articles-box {
+    width: 966px;
+    height: 332px;
+    margin-bottom: 111px;
+    margin-left: 93px;
+    display: flex;
+    justify-content: space-between;
+    
+   
+    
+}
+
+.kanji-article {
+    overflow: hidden;
+    height: 400px;
+    width: 300px;
+    box-shadow: 0 1px 4px 1px #00000011;
+    border-radius: 2px;
+}
+
+.kanji-article-title {
+   margin-left: 16px;
+    margin-top: 18px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2D3748;
+}
+
+.kanji-article-poster {
+    width: 300px;
+    height: 179px;
+
+}
+
+.kanji-article-text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #718096;
+}
+
+.kanji-article-text-pos {
+    margin: 15px 25px 22px 17px;
+    
+}
+
+.kanji-article-date {
+   display: inline-flex;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #718096;
+    margin: 0 0 20px 16px;
+
+}
+
+
+.kanji-article-readmore {
+   display: inline-flex;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #2D3748;
+    margin-left: 60px;
+    margin: 0 0 20px 141px;
+}
+
+.books-article {
+   
+    height: 382px;
+    width: 300px;
+}
+
+.podcasts-article {
+  
+    height: 382px;
+    width: 300px;
 
 }
